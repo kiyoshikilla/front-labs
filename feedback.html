@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="home-header">
+
+        <section class="header-cont">
+
+            <a href="index.html">
+            <img src="/assets/img/rivne-coat.png" alt="" style="width: 250px; height: 350px;">
+
+            <h1>Рівненська обласна рада</h1>
+
+            </a>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="activity.html">Напрями діяльності</a>
+                    </li>
+                    <li>
+                        <a href="feedback.html">Зворотній зв'язок</a>
+                    </li>
+                    <li>
+                        <a href="https://rivnerada.gov.ua/">Рівненська міська рада</a>
+                    </li>
+                    <li>
+                        <a href="https://www.rv.gov.ua/">Рівненська обласна державна адміністрація</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="header-btn">
+                <button>
+                  Перейти у власний кабінет
+                </button>
+
+             <button>
+                  Зареєструватись
+               </button>
+            </div>
+
+        </section>
+
+    </header>
+
+    <main>
+        <section class="feedback-form-container">
+            <h2>Форма зворотнього зв'язку</h2>
+            
+            <form action="#" method="GET">
+                
+                <fieldset>
+                    <legend>Персональна інформація</legend>
+
+                    <div>
+                        <label for="full_name">Прізвище та ім’я:</label><br>
+                        <input type="text" id="full_name" name="full_name" required>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="age">Вік:</label><br>
+                        <input type="number" id="age" name="age" min="14" max="120">
+                    </div>
+                    <br>
+
+                    <div>
+                        <p>Освіта:</p>
+                        <input type="radio" id="edu_med_incomplete" name="education" value="неповна">
+                        <label for="edu_incomplete">Середня неповна</label><br>
+                        
+                        <input type="radio" id="edu_med_complete" name="education" value="повна">
+                        <label for="edu_complete">Середня повна</label><br>
+                        
+                        <input type="radio" id="edu_professional" name="education" value="професійна">
+                        <label for="edu_professional">Професійна</label><br>
+                        
+                        <input type="radio" id="edu_higher_incomplete" name="education" value="вища">
+                        <label for="edu_higher_incomplete">Вища неповна</label>
+
+                        <input type="radio" id="edu_higher_complete" name="education" value="вища">
+                        <label for="edu_higher_complete">Вища повна</label>
+                    </div>
+
+                </fieldset>
+                <br>
+
+                <div>
+                    <label for="feedback_purpose">Мета зворотнього зв’язку:</label><br>
+                    <select id="feedback_purpose" name="purpose">
+                        <option value="співпраця">Співпраця</option>
+                        <option value="скарга">Скарга на порушення права власності</option>
+                        <option value="пропозиція">Пропозиція</option>
+                        <option value="помилка">Наявність помилки</option>
+                    </select>
+                </div>
+                <br>
+
+                <div>
+                    <label for="details">Детально:</label><br>
+                    <textarea 
+                        id="details" 
+                        name="details" 
+                        maxlength="2000" 
+                        placeholder="Опишіть ваше питання (до 2000 символів)"
+                        cols="60"
+                        rows="8"
+                    ></textarea>
+                    </div>
+                <br>
+
+                <div>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Я даю згоду на обробку моєї інформації</label>
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Відправити</button>
+                    <button type="reset">Очистити</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; Рівненська обласна рада. Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>

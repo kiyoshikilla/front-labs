@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+a[href] {
+    color: rgb(0, 102, 204);
+    text-decoration: none;
+}
+
+a[href*="gov.ua"] {
+    font-weight: bold; 
+}
+
+header .header-cont{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding: 0.5em 2em; 
+}
+
+footer {
+    padding: 1em 2em;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+main {
+    padding: 1em 2em;
+}
+
+.header-cont > a {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.header-cont > a img {
+    width: 65px !important; 
+    height: auto !important; 
+}
+
+.header-cont > a h1 {
+    margin: 0;
+    font-size: 1.5rem; 
+}
+
+.header-cont nav,
+
+.header-cont .header-btn{
+    margin-left: 0;
+}
+
+.home-header {
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box; /* Щоб padding не ламав ширину */
+}
+
+.home-header img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.home-header img:hover {
+    filter: brightness(0.75); /* Яскравість від 1 (default) до 0.75 */
+}
+
+.meta-section {
+    margin: 20px 10%; 
+    padding: 20px; 
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+}
+
+.meta-section > h2::before {
+    content: '👋 ';
+    margin-right: 5px;
+}
+
+.leaders-table {
+    transition: transform 0.4s ease, 
+    box-shadow 0.4s ease, 
+    background-color 0.4s ease;
+}
+
+.leaders-table:hover {
+    transform: scale(1.05); /* 2D Трансформація */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Використовуємо селектор загального сусіда (~) */
+.meta-section ~ article {
+    max-height: 400px; 
+    overflow-y: auto; /* Додаємо скрол, якщо контент вищий */
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+}
+
+.contact-aside {
+    width: 25%;
+    padding: 15px;
+    background: #f7f7f7;
+    margin-left: 15px;
+    border: 2px double transparent; 
+    transition: border 0.5s linear 3s; /* Перехід з затримкою 3 сек */
+}
+
+/* Коли aside отримує фокус, рамка з'являється */
+.contact-aside:focus {
+    outline: none; 
+    border: 2px double black; 
+}
+
+.header-btn {
+    display: inline-block; /* Демонстрація display */
+    margin-left: 30px;
+}
+
+.act-list ul {
+    display: grid;
+    /* Адаптивна сітка: колонки мін. 300px, макс. 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: stretch;
+}
+
+.act-list li {
+    list-style: none;
+    display: flex; 
+    padding: 15px;
+    flex-direction: column;
+    
+    border: 2px dotted darkred; 
+    border-left: 6px solid darkred;
+}
+
+.act-list li p {
+    flex-grow: 1;
+}
+
+.act-list h2 {
+    text-align: center;
+}
+
+.act-list a { 
+    font-weight: lighter;
+    font-size: 0.9em;    
+    font-style: italic; 
+}
+
+.activity-header img {
+    transition: filter 0.3s ease-in-out;
+}
+
+.activity-header img:hover {
+    filter: brightness(0.75); /* Яскравість від 1 (default) до 0.75 */
+}
+
+/* Посилання, які ще не відвідали */
+.act-list a:link {
+    color: darkgreen;
+}
+
+.act-list a:visited {
+    color: rebeccapurple; /* Стало (або red) */
+}
+
+
+.feedback-form-container form {
+    display: flex;
+    flex-flow: column nowrap; 
+}
+
+.feedback-form-container fieldset {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-between; 
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+/* flex-елементи (діти fieldset) */
+.feedback-form-container fieldset > div {
+    flex-basis: 48%; 
+    flex-grow: 1;
+    min-width: 250px;
+    margin-bottom: 10px;
+}
+
+.feedback-form-container form > div {
+    margin-top: 15px;
+}
+
+.feedback-form-container label,
+.feedback-form-container p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.feedback-form-container input[type="text"],
+.feedback-form-container input[type="email"],
+.feedback-form-container input[type="number"],
+.feedback-form-container select,
+.feedback-form-container textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; 
+}
+
+.feedback-form-container button[type="submit"] {
+    order: 1;
+    align-self: flex-start; 
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback-form-container button[type="reset"] {
+    order: 2; 
+    align-self: flex-start;
+    background-color: #eee;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
