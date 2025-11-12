@@ -165,7 +165,7 @@ console.log(`Максимальна кількість користувачів 
 console.log(`Відділ, що його реалізує: ${activityWithMaxUsers.department}`);
 
 
-console.log("\n--- 1.3. Додавання нового напряму ---");
+console.log("\n Додавання нового напряму");
 
 function addActivity(activitiesList, newActivity) {
     
@@ -229,7 +229,7 @@ console.log(`Тривалість проєкту 2 (3 напрями): ${calcula
 // ==========================================================================
 // OOP (Функція-конструктор замість Class)
 
-console.log("\n============== ЗАВДАННЯ 2 ==============");
+console.log("\n ЗАВДАННЯ 2");
 
 function UserFeedback(lastName, firstName, age, education, feedbackPurpose, requestDateTimeString) {
     this.lastName = String(lastName);
